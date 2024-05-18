@@ -41,11 +41,11 @@ export default function Home() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 border border-black rounded-md shadow-md bg-white">
       <h1 className="text-2xl font-bold mb-4">Guess Info App</h1>
       <NameForm onSubmit={fetchInfo} onClear={handleClear} />
       {loading && (
-        <div className="mt-8 p-4 border rounded-md shadow-md bg-gray-100">
+        <div className="mt-8 p-4 border border-black rounded-md shadow-md bg-gray-100">
           Loading...
         </div>
       )}
@@ -55,15 +55,15 @@ export default function Home() {
         </div>
       )}
       {info && (
-        <div className="mt-8 p-4 border rounded-md shadow-md">
+        <div className="mt-8 p-4 border border-black rounded-md shadow-md">
           <h2 className="text-xl font-semibold mb-2">Results for {info.name}</h2>
-          <p><strong>Age:</strong> {info.age}</p>
-          <p><strong>Gender:</strong> {info.gender}</p>
-          <p><strong>Nationalities:</strong> 
+          <p className="mb-2"><strong>Age:</strong> {info.age}</p>
+          <p className="mb-2"><strong>Gender:</strong> {info.gender}</p>
+          <p className="mb-2"><strong>Nationalities:</strong> 
           <ul className="list-disc list-inside mt-2 space-y-1">
               {info.country.map((country, index) => (
                 <li key={index} className="text-lg">
-                  {getName(country.country_id)} <span className="text-black-700">({(country.probability * 100).toFixed(2)}%)</span>
+                  {getName(country.country_id)} <span className="text-black-500">({(country.probability * 100).toFixed(2)}%)</span>
                 </li>
               ))}
             </ul>

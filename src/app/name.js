@@ -29,7 +29,7 @@ const NameForm = ({ onSubmit, onClear }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="mt-1 block w-full px-3 py-2 border-gray-600 rounded-md shadow-md focus:outline focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-black"
+          className="mt-1 block w-full px-3 py-2 border border-black rounded-md shadow-md focus:outline focus:ring-indigo-700 focus:border-indigo-500 sm:text-sm text-black"
         />
       </label>
       <button
@@ -41,7 +41,7 @@ const NameForm = ({ onSubmit, onClear }) => {
       <button
           type="button"
           onClick={handleClear}
-          className="inline-flex items-center px-4 py-2 ml-4 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+          className="inline-flex items-center px-4 py-2 ml-4 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-600 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
         >
           Clear
         </button>
